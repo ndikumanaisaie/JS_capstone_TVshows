@@ -92,8 +92,19 @@ function renderResult(results) {
                 <li class="list-group-item"><a href="${result.show.url}" class="card-link">Watch Here</a></li>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Comments</a>
-                <a href="#" class="card-link">Reservations</a>
+                <form class="d-flex flex-column gap-3 form1">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label text-dark">Name</label>
+                    <input type="text" class="form-control name" id="name" required maxlength="32">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="comment" class="form-label text-dark">Comment</label>
+                    <textarea class="form-control" aria-label="With textarea" id="comment" required maxlength="32"></textarea>
+                  </div>
+                  <div class="col-6 mt-3 d-flex justify-content-start">
+                    <button type="submit" class="btn btn-primary bg-dark shadow submit">Submit</button>
+                  </div>
+                </form>
               </div>
               </div>
             <div class="modal-footer">
