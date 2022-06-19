@@ -3,10 +3,6 @@ import './styles/style.css';
 import './styles/bootstrap.min.css';
 import './styles/bootstrap-grid.min.css';
 
-// document.addEventListener('DOMContentLoaded', () => {
-
-// });
-
 const searchShow = async () => {
   const url = 'https://api.tvmaze.com/search/shows?q=girls';
   await fetch(url)
@@ -51,16 +47,10 @@ function renderResult(results) {
 
 // let searchTimoutToken = 0;
 
-window.onload = () => {
+// window.onload = () => {
+//   searchShow();
+// };
+
+document.addEventListener('DOMContentLoaded', () => {
   searchShow();
-  // const searchField = document.getElementById('searchResult');
-  // searchField.onkeyup = () => {
-  //   clearTimeout(searchTimoutToken);
-
-  //   if (searchField.value.trim().length === 0) return;
-
-  //   searchTimoutToken = setTimeout(() => {
-  //     searchShow(searchField.value);
-  //   }, 250);
-  // };
-};
+});
