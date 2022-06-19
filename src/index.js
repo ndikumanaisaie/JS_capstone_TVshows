@@ -7,8 +7,8 @@ import './styles/bootstrap-grid.min.css';
 
 // });
 
-const searchShow = async (query) => {
-  const url = `https://api.tvmaze.com/search/shows?q=${query}`;
+const searchShow = async () => {
+  const url = 'https://api.tvmaze.com/search/shows?q=girls';
   await fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -49,17 +49,18 @@ function renderResult(results) {
   });
 }
 
-let searchTimoutToken = 0;
+// let searchTimoutToken = 0;
 
 window.onload = () => {
-  const searchField = document.getElementById('searchResult');
-  searchField.onkeyup = () => {
-    clearTimeout(searchTimoutToken);
+  searchShow();
+  // const searchField = document.getElementById('searchResult');
+  // searchField.onkeyup = () => {
+  //   clearTimeout(searchTimoutToken);
 
-    if (searchField.value.trim().length === 0) return;
+  //   if (searchField.value.trim().length === 0) return;
 
-    searchTimoutToken = setTimeout(() => {
-      searchShow(searchField.value);
-    }, 250);
-  };
+  //   searchTimoutToken = setTimeout(() => {
+  //     searchShow(searchField.value);
+  //   }, 250);
+  // };
 };
