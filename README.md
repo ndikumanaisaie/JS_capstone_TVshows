@@ -2,7 +2,7 @@
 
 ## Leaderboard
 
-> A web application which is based on external API TVmaze. This amazing website let users enjoy TV series and movies..
+> A web application which is based on external API TVmaze. This amazing website let users enjoy TV series and movies.
 
 ## Below is the screenshot of my work
 ![Leaderboard](https://github.com/ndikumanaisaie/Leaderboard/blob/feature/final_touch/src/images/shot.png)

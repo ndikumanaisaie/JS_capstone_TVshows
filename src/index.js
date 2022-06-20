@@ -3,6 +3,7 @@ import './styles/style.css';
 import './styles/bootstrap.min.css';
 import './styles/bootstrap-grid.min.css';
 import './bootstrap.bundle.min.js';
+import { getLikes, sendLikes } from './utility_functions.js';
 
 const searchShow = async () => {
   const url = 'https://api.tvmaze.com/search/shows?q=girls';
@@ -12,6 +13,7 @@ const searchShow = async () => {
       console.log(data);
       renderResult(data);
       document.querySelector('.errorMessage').innerHTML = '';
+      return data;
     })
     .catch((e) => {
       document.querySelector('.errorMessage').innerHTML = `<span class="text-danger">${e}No such show available</span>`;
@@ -56,7 +58,7 @@ function renderResult(results) {
     <div class="card-body">
       <div class="d-flex justify-content-between">
         <h5 class="card-title">${result.show.name}</h5>
-        <i class="bi bi-suit-heart"></i>
+        <i class="bi bi-suit-heart like" id="${result.show.id}">id: ${result.show.id}</i>
       </div>
       <div class="d-flex justify-content-end">
         <span class="text-dark">${5} likes</span>
@@ -73,7 +75,7 @@ function renderResult(results) {
   
     <!-- Modal -->
     <div class="modal fade" id="exampleModal${result.show.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
@@ -115,9 +117,15 @@ function renderResult(results) {
     </div>
     </div>`;
     resultList.appendChild(element);
+    sendLikes(result.show.id);
+    const likeBtn = document.getElementById(result.show.id);
+    likeBtn.addEventListener('click', () => {
+      console.log(result.show.id);
+    });
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   searchShow();
+  getLikes();
 });

@@ -13,3 +13,7 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.like {
+  cursor: pointer;
+}
