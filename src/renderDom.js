@@ -50,13 +50,11 @@ const renderShow = async () => {
 </nav> `;
   resultList.insertAdjacentHTML('beforebegin', navBar);
   const myLikes = await getLikes();
-  console.log(myLikes);
   // Inserting tv shows
   shows.forEach((result) => {
     const likeObject = myLikes
       .filter((like) => typeof like.item_id === 'string')
       .filter((like) => like.item_id === `${result.show.id}`)[0];
-    console.log(likeObject);
     const element = document.createElement('div');
     element.classList.add('card');
     element.style.width = '20rem';
@@ -65,10 +63,10 @@ const renderShow = async () => {
     <div class="card-body">
       <div class="d-flex justify-content-between">
         <h5 class="card-title">${result.show.name}</h5>
-        <i class="bi bi-suit-heart like-button" id="${result.show.id}">id: ${result.show.id}</i>
+        <i class="bi bi-suit-heart like-button" id="${result.show.id}"></i>
       </div>
       <div class="d-flex justify-content-end d-like" id="${result.show.id + 1}">
-        <span>${likeObject ? likeObject.likes : 0} </span>
+        <span>${likeObject ? likeObject.likes : 0} Likes</span>
       </div>
     </div>
     <div class="card-body">
@@ -167,14 +165,12 @@ const displayLikes = () => {
       const currentBtnId = btn.getAttribute('id');
       await sendLikes(currentBtnId);
       const btnParent = btn.parentElement;
-      const likeEment = btnParent.nextElementSibling.firstChild;
+      const likeEment = btnParent.nextElementSibling.firstElementChild;
       const likes = await getLikes();
-      console.log(likes);
       const like = likes
         .filter((like) => typeof like.item_id === 'string')
         .filter((like) => like.item_id === currentBtnId)[0];
-      console.log(like);
-      likeEment.textContent = `${`${like.likes}`} Likes`;
+      likeEment.textContent = `${like.likes} Likes`;
     });
   });
 };
