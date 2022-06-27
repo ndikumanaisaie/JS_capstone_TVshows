@@ -1,11 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Leaderboard
+## JS_capstone_TVshows
 
 > A web application which is based on external API TVmaze. This amazing website let users enjoy TV series and movies.
 
 ## Below is the screenshot of my work
-![Leaderboard](https://github.com/ndikumanaisaie/Leaderboard/blob/feature/final_touch/src/images/shot.png)
+![JS_capstone_TVshows](https://github.com/ndikumanaisaie/JS_capstone_TVshows/blob/feature/tvbranch-1/src/images/shot.png)
 
 ## Built with
 - HTML

@@ -43,19 +43,19 @@
       "jest-localstorage-mock"
     ]
   },
-  "name": "to-do-list",
-  "description": "\"To-do list\" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.",
+  "name": "JS_capstone_TVshows",
+  "description": "\"JS_capstone_TVshows\" A web application which is based on external API TVmaze. This amazing website let users enjoy TV series and movies.",
   "version": "1.0.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ndikumanaisaie/To-do-list.git"
+    "url": "git+https://github.com/ndikumanaisaie/JS_capstone_TVshows.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ndikumanaisaie/To-do-list/issues"
+    "url": "https://github.com/ndikumanaisaie/JS_capstone_TVshows/issues"
   },
-  "homepage": "https://github.com/ndikumanaisaie/To-do-list#readme"
+  "homepage": "https://github.com/ndikumanaisaie/JS_capstone_TVshows#readme"
 }
