@@ -17,3 +17,136 @@ p {
 .like-button {
   cursor: pointer;
 }
+
+/* .card-img-top {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+} */
+
+.app-wrapper {
+  height: 100%;
+  padding: 0 0 4rem;
+}
+
+.card-img-top {
+  transition: transform 0.2s; /* Animation */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-img-top :hover {
+  transform: scale(1.5);
+}
+
+/* .navbar {
+  margin: 24px auto;
+} */
+
+.shows {
+  margin: 24px;
+}
+
+.app-footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(224, 240, 250);
+  width: 100%;
+}
+
+.app-modal {
+  position: fixed;
+  display: none;
+  z-index: 100;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+.appear {
+  display: block;
+}
+
+.app-modal-content {
+  width: 50%;
+  background-color: white;
+  margin: 1rem auto;
+  padding: 0 5%;
+  position: relative;
+}
+
+.comment-image {
+  width: 300px;
+}
+
+.comment-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.show-title {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.show-description {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comment-form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.comment-form-wrapper input,
+.comment-form-wrapper textarea {
+  width: 100%;
+  align-self: flex-start;
+}
+
+.comment-form-wrapper textarea {
+  margin-bottom: 1rem;
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+@media screen and (max-width: 395px) {
+  .app-modal-content {
+    width: 70%;
+  }
+
+  .comment-image {
+    width: 80%;
+  }
+
+  .comment-close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .app-modal-content {
+    width: 70%;
+  }
+
+  .comment-image {
+    width: 80%;
+  }
+
+  .comment-close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
