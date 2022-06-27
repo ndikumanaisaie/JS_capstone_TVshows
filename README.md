@@ -24,7 +24,7 @@
 - LinkedIn: [ndikumana-isaie-21166273](https://www.linkedin.com/in/ndikumana-isaie-21166273/)
 
 ## Link to URL on browser
-- [TVmaze](https://ndikumanaisaie.github.io/JS_capstone_TVshows/dist/)
+- [TVmaze](https://ndikumanaisaie.github.io/JS_capstone_TVshows/dist)
 
 ## Link to URL on gitHub
 - [TVmaze](https://github.com/ndikumanaisaie/JS_capstone_TVshows/)
