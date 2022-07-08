@@ -3,7 +3,7 @@ import './styles/bootstrap.min.css';
 import './styles/bootstrap-grid.min.css';
 import renderNavbar from './navbar.js';
 import addEventToCommentBtn from './comment.js';
-import { renderShow, displayLikes } from './renderDOM.js';
+import { renderShow, displayLikes } from './renderDom.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await renderNavbar();

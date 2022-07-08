@@ -1,4 +1,4 @@
-import { generateShows, resultElement } from './renderDOM.js';
+import { generateShows, resultElement } from './renderDom.js';
 
 const renderNavbar = async () => {
   const myshows = await generateShows();

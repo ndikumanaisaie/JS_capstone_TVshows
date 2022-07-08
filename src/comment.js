@@ -1,4 +1,4 @@
-import { resultElement, generateShows } from './renderDOM.js';
+import { resultElement, generateShows } from './renderDom.js';
 import getDate from './date.js';
 
 const commentsURL = (id = 0) => {
